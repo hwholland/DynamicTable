@@ -3,9 +3,18 @@
     "company": {
       "customer": {
         "toolbar": [
-          "TitleCustomers",
-          "ToolbarSpacer",
-          "SearchField"
+          {
+            "fragment": "Title",
+            "properties": {
+              "text": "Customers"
+            }
+          },
+          {
+            "fragment": "ToolbarSpacer"
+          },
+          {
+            "fragment": "SearchField"
+          }
         ],
         "columns": [
           {
@@ -47,9 +56,18 @@
     "person": {
       "contact": {
         "toolbar": [
-          "TitleContact",
-          "ToolbarSpacer",
-          "SearchField"
+          {
+            "fragment": "Title",
+            "properties": {
+              "text": "Contacts"
+            }
+          },
+          {
+            "fragment": "ToolbarSpacer"
+          },
+          {
+            "fragment": "SearchField"
+          }
         ],
         "columns": [
           {
@@ -156,9 +174,18 @@
     "thing": {
       "product": {
         "toolbar": [
-          "TitleProducts",
-          "ToolbarSpacer",
-          "SearchField"
+          {
+            "fragment": "Title",
+            "properties": {
+              "text": "Products"
+            }
+          },
+          {
+            "fragment": "ToolbarSpacer"
+          },
+          {
+            "fragment": "SearchField"
+          }
         ],
         "columns": [
           {
@@ -235,9 +262,18 @@
     "company": {
       "customer": {
         "toolbar": [
-          "TitleCustomers",
-          "ToolbarSpacer",
-          "SearchField"
+          {
+            "fragment": "Title",
+            "properties": {
+              "text": "Customers"
+            }
+          },
+          {
+            "fragment": "ToolbarSpacer"
+          },
+          {
+            "fragment": "SearchField"
+          }
         ],
         "columns": [
           {
@@ -279,9 +315,18 @@
     "person": {
       "contact": {
         "toolbar": [
-          "TitleContact",
-          "ToolbarSpacer",
-          "SearchField"
+          {
+            "fragment": "Title",
+            "properties": {
+              "text": "Contacts"
+            }
+          },
+          {
+            "fragment": "ToolbarSpacer"
+          },
+          {
+            "fragment": "SearchField"
+          }
         ],
         "columns": [
           {
@@ -388,9 +433,18 @@
     "thing": {
       "product": {
         "toolbar": [
-          "TitleProducts",
-          "ToolbarSpacer",
-          "SearchField"
+          {
+            "fragment": "Title",
+            "properties": {
+              "text": "Products"
+            }
+          },
+          {
+            "fragment": "ToolbarSpacer"
+          },
+          {
+            "fragment": "SearchField"
+          }
         ],
         "columns": [
           {

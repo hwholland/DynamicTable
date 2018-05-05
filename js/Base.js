@@ -21,14 +21,13 @@ sap.ui.define(["sap/ui/base/Object", "sap/ui/model/json/JSONModel"], function(Ba
         },
 
         /**
-         * @brief [brief description]
-         * @class       DynamicTable.js.Base
+         * @brief       HTTP GET requests
+         * @method      _get
          * @memberof    DynamicTable.js.Base
          * 
-         * @param l [description]
-         * @param s [description]
-         * @param r [description]
-         * @return [description]
+         * @param {String}      sUrl        The URL for the GET request
+         * @param {Function}    fnSuccess   Function to execute on success
+         * @param {Function}    fnError     Function to execute on error
          */
         _get: function(sUrl, fnSuccess, fnError) {
             $.ajax({

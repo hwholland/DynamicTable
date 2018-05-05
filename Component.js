@@ -146,8 +146,10 @@ sap.ui.define(['sap/ui/core/UIComponent', 'sap/ui/model/json/JSONModel', 'Dynami
          * @param {Object} oConfig  Configuration for the table instance (method + subject + class)
          */
         getFragments: function (oConfig) {
+            console.log(oConfig);
             for (var i = 0; i < oConfig.columns.length; i++) {
                 var oTemplate = oConfig.columns[i].template;
+
                 var oFragment = sap.ui.xmlfragment("DynamicTable.fragment." + oTemplate.fragment, this);
                 var aProperties = Object.getOwnPropertyNames(oTemplate.binding);
                 for(var j = 0; j < aProperties.length; j++) {
@@ -160,8 +162,16 @@ sap.ui.define(['sap/ui/core/UIComponent', 'sap/ui/model/json/JSONModel', 'Dynami
                 oConfig.columns[i].template = oFragment;
             }
             for (var x = 0; x < oConfig.toolbar.length; x++) {
-                var sTemplate = oConfig.toolbar[x];
-                var oFragment = sap.ui.xmlfragment("DynamicTable.fragment." + sTemplate, this);
+                var oTemplate = oConfig.toolbar[x];
+                console.log(oTemplate);
+                var oFragment = sap.ui.xmlfragment("DynamicTable.fragment." + oTemplate.fragment, this);
+                if(oTemplate.properties) {
+                    var aProperties = Object.getOwnPropertyNames(oTemplate.properties);
+                    for(var j = 0; j < aProperties.length; j++) {
+                        var sProperty = aProperties[j];
+                        oFragment.setProperty(sProperty, oTemplate.properties[sProperty]);
+                    }    
+                }
                 if(this.view) {
                     this.view.addDependent(oFragment);    
                 }
