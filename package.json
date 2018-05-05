@@ -1,0 +1,31 @@
+{
+    "name": "@hwholland/DynamicTable",
+    "version": "0.5.0",
+    "description": "OpenUI5 component which dynamically builds a responsive table (sap.m.Table) based on properties defined in a data structure.",
+    "main": "index.js",
+    "dependencies": {
+        "jsdoc": "^3.5.5",
+        "jsdoc-template": "^1.2.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hwholland/DynamicTable.git"
+    },
+    "author": {
+        "name": "Harrison Holland",
+        "email": "harrisonholland@gmail.com"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hwholland/DynamicTable.git"
+    },
+    "homepage": "https://github.com/hwholland/DynamicTable.git#readme",
+    "devDependencies": {
+        "doxdox": "^2.0.3",
+        "doxdox-plugin-bootstrap": "^1.1.8"
+    }
+}

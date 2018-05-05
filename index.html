@@ -27,8 +27,9 @@
             var pComponent = new Promise((resolve, reject) => {
                 resolve(getInstance("view", "company", "customer", null));
             }).then(function (oComponent) {
-                var oModel = oComponent.getDataModel();
-                var oData = oModel.getData();
+                var oConfigModel = oComponent.getConfigModel();
+                var oDataModel = oComponent.getDataModel();
+                var oData = oConfigModel.getData();
                 var oToolbar = new sap.m.Toolbar();
                 var iLevel = 0;
                 var sPath = "/";
@@ -49,7 +50,7 @@
                         sNumber++;
                         var oSelect = sap.ui.getCore().byId("Select" + sNumber);
                         oSelect.removeAllItems();
-                        fnGetItems(oModel.getProperty(path), oSelect);
+                        fnGetItems(oConfigModel.getProperty(path), oSelect);
                     }
                     
                 }
@@ -102,13 +103,18 @@
                         var sSubject = sap.ui.getCore().byId("Select1").getSelectedKey();
                         var sClass = sap.ui.getCore().byId("Select2").getSelectedKey();
                         var oControl = oComponent.getControl(sMethod, sSubject, sClass, null);
+                        oControl.setModel(oDataModel, "data");
+                        console.log(oControl);
                         sap.ui.getCore().byId("page1").addContent(oControl);
                     }
                 }).addStyleClass("sapUiSmallMarginBegin");
 
                 oToolbar.addContent(oMethodSelect).addContent(oSubjectSelect).addContent(oClassificationSelect).addContent(oButton);
 
+
                 var oControl = oComponent.getControl("view", "company", "customer", null);
+                console.log(oControl);
+                oControl.setModel(oDataModel, "data");
         
                 var oPage = new sap.m.Page("page1",{
                     title: "DynamicTable",

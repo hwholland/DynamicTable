@@ -36,6 +36,7 @@ sap.ui.define(["DynamicTable/js/Base", "sap/m/Table", "sap/m/Column", "sap/m/Too
                 oModel.setSizeLimit(250000);  
                 oModel.setProperty("/columns", oConfig.columns);
                 this.table.setModel(oModel);
+                this.setDataset(oConfig);
                 this.setColumns();
                 this.setToolbar(oConfig);
             },
@@ -89,9 +90,9 @@ sap.ui.define(["DynamicTable/js/Base", "sap/m/Table", "sap/m/Column", "sap/m/Too
              * @param      {Object}  oConfig  The configuration containing the column properties
              * @public
              */
-            setDataset: function(oData, oConfig) {
-                var oModel = this.table.getModel();
-                oModel.setProperty("/data", oData.data);
+            setDataset: function(oConfig) {
+                //var oModel = this.table.getModel();
+                //oModel.setProperty("/data", oData.data);
                 var oColumnListItem = new ColumnListItem({
                     highlight: "{highlight}"
                 });
@@ -101,8 +102,8 @@ sap.ui.define(["DynamicTable/js/Base", "sap/m/Table", "sap/m/Column", "sap/m/Too
                     //  
                 }
                 this.table.bindAggregation("items", {
-                    path: "/data",
-                    sorter: new sap.ui.model.Sorter("CompanyID"),
+                    path: "data>/data",
+                    //sorter: new sap.ui.model.Sorter("CompanyID"),
                     template: oColumnListItem
                 });
                 console.log(this.table);

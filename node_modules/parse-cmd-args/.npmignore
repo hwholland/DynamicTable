@@ -1,0 +1,7 @@
+coverage/
+
+test/
+
+.eslintrc
+
+.travis.yml

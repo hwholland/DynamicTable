@@ -17,7 +17,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "CompanyID",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>CompanyID"
+              }
+            },
             "mergeDuplicates": true
           },
           {
@@ -28,7 +33,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "CompanyName",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>CompanyName"
+              }
+            },
             "mergeDuplicates": false
           }
         ]
@@ -51,7 +61,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "PersonID",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>PersonID"
+              }
+            },
             "mergeDuplicates": true
           },
           {
@@ -62,7 +77,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "ViewPersonName",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>PersonName"
+              }
+            },
             "mergeDuplicates": false
           },
           {
@@ -73,7 +93,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "CompanyName",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>CompanyName"
+              }
+            },
             "mergeDuplicates": false
           },
           {
@@ -84,7 +109,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "Email",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>EmailAddress"
+              }
+            },
             "mergeDuplicates": false
           },
           {
@@ -95,7 +125,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "Phone",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>PhoneNumber"
+              }
+            },
             "mergeDuplicates": false
           },
           {
@@ -106,7 +141,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "JobTitle",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>JobTitle"
+              }
+            },
             "mergeDuplicates": false
           }
         ]
@@ -130,7 +170,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "ProductID",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>ProductID"
+              }
+            },
             "mergeDuplicates": true
           },
           {
@@ -141,7 +186,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "ViewItem",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>ProductName"
+              }
+            },
             "mergeDuplicates": false
           },
           {
@@ -152,7 +202,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "ViewQuantity",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>QuantityAvailable"
+              }
+            },
             "mergeDuplicates": false
           },
           {
@@ -163,7 +218,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "ViewAmount",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>SalesPrice"
+              }
+            },
             "mergeDuplicates": false
           }
         ]
@@ -189,7 +249,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "CompanyID",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>CompanyID"
+              }
+            },
             "mergeDuplicates": true
           },
           {
@@ -200,7 +265,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "CompanyName",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>CompanyName"
+              }
+            },
             "mergeDuplicates": false
           }
         ]
@@ -223,7 +293,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "PersonID",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>PersonID"
+              }
+            },
             "mergeDuplicates": true
           },
           {
@@ -234,7 +309,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "ViewPersonName",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>PersonName"
+              }
+            },
             "mergeDuplicates": false
           },
           {
@@ -245,7 +325,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "CompanyName",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>CompanyName"
+              }
+            },
             "mergeDuplicates": false
           },
           {
@@ -256,7 +341,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "Email",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>EmailAddress"
+              }
+            },
             "mergeDuplicates": false
           },
           {
@@ -267,7 +357,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "Phone",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>PhoneNumber"
+              }
+            },
             "mergeDuplicates": false
           },
           {
@@ -278,7 +373,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "JobTitle",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>JobTitle"
+              }
+            },
             "mergeDuplicates": false
           }
         ]
@@ -302,7 +402,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "ProductID",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>ProductID"
+              }
+            },
             "mergeDuplicates": true
           },
           {
@@ -313,7 +418,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "ViewItem",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>ProductName"
+              }
+            },
             "mergeDuplicates": false
           },
           {
@@ -324,7 +434,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "ViewQuantity",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>QuantityAvailable"
+              }
+            },
             "mergeDuplicates": false
           },
           {
@@ -335,7 +450,12 @@
             "visible": true,
             "hAlign": "Begin",
             "vAlign": "Middle",
-            "template": "ViewAmount",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>SalesPrice"
+              }
+            },
             "mergeDuplicates": false
           }
         ]

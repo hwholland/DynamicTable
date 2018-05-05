@@ -2,6 +2,13 @@ sap.ui.define(["sap/ui/base/Object", "sap/ui/model/json/JSONModel"], function(Ba
     "use strict";
     return Base.extend("DynamicTable.js.Base", {
 
+        /**
+         * @class       DynamicTable.js.Base
+         * @augments    sap.ui.base.Object
+         * @brief       Base class containing several methods applicable globally
+         * @param   {Object}    Configuration settings of any sort can be passed here, and 
+         * they will be looped through and applied.
+         */
         constructor: function(oProperties) {
             if(oProperties) {
                 var aNames = Object.getOwnPropertyNames(oProperties);
@@ -13,6 +20,16 @@ sap.ui.define(["sap/ui/base/Object", "sap/ui/model/json/JSONModel"], function(Ba
             }
         },
 
+        /**
+         * @brief [brief description]
+         * @class       DynamicTable.js.Base
+         * @memberof    DynamicTable.js.Base
+         * 
+         * @param l [description]
+         * @param s [description]
+         * @param r [description]
+         * @return [description]
+         */
         _get: function(sUrl, fnSuccess, fnError) {
             $.ajax({
                 url: sUrl,

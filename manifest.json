@@ -9,6 +9,10 @@
       "config": {
         "type": "json",
         "uri": "model/config.json"
+      },
+      "data": {
+        "type": "json",
+        "uri": "model/data.json"
       }
     },
     "description": "{{description}}",
@@ -33,6 +37,11 @@
     "models": {
       "config": {
         "dataSource": "config",
+        "preload": true,
+        "type": "sap.ui.model.json.JSONModel"
+      },
+      "data": {
+        "dataSource": "data",
         "preload": true,
         "type": "sap.ui.model.json.JSONModel"
       }
