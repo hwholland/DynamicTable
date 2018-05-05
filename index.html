@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <script src="../../libs/ui5/resources/sap-ui-core.js" id="sap-ui-bootstrap" data-sap-ui-theme="sap_belize_plus" data-sap-ui-bindingSyntax="complex" data-sap-ui-compatVersion="edge" data-sap-ui-preload="async" data-sap-ui-language="en" data-sap-ui-resourceroots='{
+                    "DynamicTable": "./"  }'>
+        </script>
+        <script id="web">
+        sap.ui.getCore().attachInit(function() {
+            function getInstance(sMethod, sSubject, sClass, oView) {
+                return (new Promise((resolve, reject) => {
+                    resolve(sap.ui.component({
+                        name: "DynamicTable",
+                        manifest: true,
+                        componentData: {
+                            method: sMethod,
+                            subject: sSubject,
+                            class: sClass,
+                            view: oView
+                        }
+                    }));
+                }));
+            }
+
+            var pComponent = new Promise((resolve, reject) => {
+                resolve(getInstance("view", "company", "customer", null));
+            }).then(function (oComponent) {
+                var oModel = oComponent.getDataModel();
+                var oData = oModel.getData();
+                var oToolbar = new sap.m.Toolbar();
+                var iLevel = 0;
+                var sPath = "/";
+                
+                function fnChange(oEvent) {
+                    var oItem = oEvent.getParameters().selectedItem;
+                    var sKey = oItem.getKey();
+                    
+                    var sSourceId = oEvent.getSource().getId();
+                    var sNumber = parseInt(sSourceId.replace( /^\D+/g, ''),10);
+                    if(sNumber < 2) {
+                        var path = "/";
+                        for (var i = 0; i <= sNumber; i++) {
+                            var sId = "Select" + i;
+                            var sKey = sap.ui.getCore().byId("Select" + i).getSelectedKey();
+                            path = path + sKey + "/";
+                        }
+                        sNumber++;
+                        var oSelect = sap.ui.getCore().byId("Select" + sNumber);
+                        oSelect.removeAllItems();
+                        fnGetItems(oModel.getProperty(path), oSelect);
+                    }
+                    
+                }
+
+                function fnGetItems(oNode, oSelect) {
+                    var aProperties = Object.getOwnPropertyNames(oNode);
+
+                    for (var i = aProperties.length - 1; i >= 0; i--) {
+                        var oItem = new sap.ui.core.Item({
+                            key: aProperties[i],
+                            text: aProperties[i]
+                        });
+                        oSelect.addItem(oItem);
+                    }
+                    return(oSelect);
+                }
+                var oMethodLabel = new sap.m.Label({
+                    text: "Method"
+                }).addStyleClass("sapUiMediumMarginBegin");
+                var oMethodSelect = new sap.m.ActionSelect("Select0", {
+                    forceSelection: false,
+                    width: "175px",
+                    change: fnChange
+                });
+                fnGetItems(oData, oMethodSelect);
+
+                var oSubjectLabel = new sap.m.Label({
+                    text: "Subject"
+                }).addStyleClass("sapUiMediumMarginBegin");
+                var oSubjectSelect = new sap.m.ActionSelect("Select1", {
+                    forceSelection: false,
+                    width: "175px",
+                    change: fnChange
+                });
+
+                var oClassificationLabel = new sap.m.Label({
+                    text: "Classification"
+                }).addStyleClass("sapUiMediumMarginBegin");
+                var oClassificationSelect = new sap.m.ActionSelect("Select2", {
+                    forceSelection: false,
+                    width: "175px",
+                    change: fnChange
+                });
+
+                var oButton = new sap.m.Button({
+                    text: "Get Component",
+                    press: function() {
+                        sap.ui.getCore().byId("page1").removeAllContent();
+                        var sMethod = sap.ui.getCore().byId("Select0").getSelectedKey();
+                        var sSubject = sap.ui.getCore().byId("Select1").getSelectedKey();
+                        var sClass = sap.ui.getCore().byId("Select2").getSelectedKey();
+                        var oControl = oComponent.getControl(sMethod, sSubject, sClass, null);
+                        sap.ui.getCore().byId("page1").addContent(oControl);
+                    }
+                }).addStyleClass("sapUiSmallMarginBegin");
+
+                oToolbar.addContent(oMethodSelect).addContent(oSubjectSelect).addContent(oClassificationSelect).addContent(oButton);
+
+                var oControl = oComponent.getControl("view", "company", "customer", null);
+        
+                var oPage = new sap.m.Page("page1",{
+                    title: "DynamicTable",
+                    customHeader: oToolbar,
+                    content: [
+                        oControl
+                    ]
+                });
+        
+                var oApp = new sap.m.App("myApp", {
+                    initialPage: "page1"
+                });
+                oApp.addPage(oPage);
+                oApp.placeAt("body");
+        
+            });
+        });
+        </script>
+        <title>Table Component</title>
+    </head>
+    <body class="sapUiBody" id="body" role="sapUiBody">
+    </body>
+</html>

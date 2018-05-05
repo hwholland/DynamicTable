@@ -1,0 +1,4 @@
+﻿<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Input value="{PersonName}" placeholder="Person's Name" valueHelpRequest="onOpenDialog" fieldGroupIds="fragment=DialogContact"
+		showValueHelp="true"/>
+</core:FragmentDefinition>

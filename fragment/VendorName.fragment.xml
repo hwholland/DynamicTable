@@ -1,0 +1,4 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Input value="{VendorName}" placeholder="Name of Person or Business" 
+		showValueHelp="true" valueHelpRequest="onOpenVendorDialog" valueHelpOnly="false"/>
+</core:FragmentDefinition>

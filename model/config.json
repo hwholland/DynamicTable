@@ -1,0 +1,346 @@
+{
+  "view": {
+    "company": {
+      "customer": {
+        "toolbar": [
+          "TitleCustomers",
+          "ToolbarSpacer",
+          "SearchField"
+        ],
+        "columns": [
+          {
+            "width": "12em",
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Block",
+            "demandPopin": true,
+            "header": "Company ID",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "CompanyID",
+            "mergeDuplicates": true
+          },
+          {
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Company Name",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "CompanyName",
+            "mergeDuplicates": false
+          }
+        ]
+      }
+    },
+    "person": {
+      "contact": {
+        "toolbar": [
+          "TitleContact",
+          "ToolbarSpacer",
+          "SearchField"
+        ],
+        "columns": [
+          {
+            "width": "12em",
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Block",
+            "demandPopin": true,
+            "header": "Person ID",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "PersonID",
+            "mergeDuplicates": true
+          },
+          {
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Person Name",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "ViewPersonName",
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Tablet",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Company",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "CompanyName",
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Tablet",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Email",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "Email",
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Tablet",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Phone",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "Phone",
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Tablet",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Job Title",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "JobTitle",
+            "mergeDuplicates": false
+          }
+        ]
+      }
+
+    },
+    "thing": {
+      "product": {
+        "toolbar": [
+          "TitleProducts",
+          "ToolbarSpacer",
+          "SearchField"
+        ],
+        "columns": [
+          {
+            "width": "6em",
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Block",
+            "demandPopin": true,
+            "header": "Product ID",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "ProductID",
+            "mergeDuplicates": true
+          },
+          {
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Product Name",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "ViewItem",
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Tablet",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Quantity Available",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "ViewQuantity",
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Tablet",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Sales Price",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "ViewAmount",
+            "mergeDuplicates": false
+          }
+        ]
+      }
+
+    }
+  },
+ "edit": {
+    "company": {
+      "customer": {
+        "toolbar": [
+          "TitleCustomers",
+          "ToolbarSpacer",
+          "SearchField"
+        ],
+        "columns": [
+          {
+            "width": "12em",
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Block",
+            "demandPopin": true,
+            "header": "Company ID",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "CompanyID",
+            "mergeDuplicates": true
+          },
+          {
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Company Name",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "CompanyName",
+            "mergeDuplicates": false
+          }
+        ]
+      }
+    },
+    "person": {
+      "contact": {
+        "toolbar": [
+          "TitleContact",
+          "ToolbarSpacer",
+          "SearchField"
+        ],
+        "columns": [
+          {
+            "width": "12em",
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Block",
+            "demandPopin": true,
+            "header": "Person ID",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "PersonID",
+            "mergeDuplicates": true
+          },
+          {
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Person Name",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "ViewPersonName",
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Tablet",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Company",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "CompanyName",
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Tablet",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Email",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "Email",
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Tablet",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Phone",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "Phone",
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Tablet",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Job Title",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "JobTitle",
+            "mergeDuplicates": false
+          }
+        ]
+      }
+
+    },
+    "thing": {
+      "product": {
+        "toolbar": [
+          "TitleProducts",
+          "ToolbarSpacer",
+          "SearchField"
+        ],
+        "columns": [
+          {
+            "width": "6em",
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Block",
+            "demandPopin": true,
+            "header": "Product ID",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "ProductID",
+            "mergeDuplicates": true
+          },
+          {
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Product Name",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "ViewItem",
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Tablet",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Quantity Available",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "ViewQuantity",
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Tablet",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Sales Price",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": "ViewAmount",
+            "mergeDuplicates": false
+          }
+        ]
+      }
+
+    }
+  } 
+}
