@@ -4,15 +4,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="utf-8">
-        <script src="../../libs/ui5/resources/sap-ui-core.js" id="sap-ui-bootstrap" data-sap-ui-theme="sap_belize_plus" data-sap-ui-bindingSyntax="complex" data-sap-ui-compatVersion="edge" data-sap-ui-preload="async" data-sap-ui-language="en" data-sap-ui-resourceroots='{
-                    "DynamicTable": "./"  }'>
+        <script src="../../../../libs/ui5/resources/sap-ui-core.js" id="sap-ui-bootstrap" data-sap-ui-theme="sap_belize_plus" data-sap-ui-bindingSyntax="complex" data-sap-ui-compatVersion="edge" data-sap-ui-preload="async" data-sap-ui-language="en" data-sap-ui-resourceroots='{
+                    "bean.dynamic.Table": "./"  }'>
         </script>
         <script id="web">
         sap.ui.getCore().attachInit(function() {
             function getInstance(sMethod, sSubject, sClass, oView) {
                 return (new Promise((resolve, reject) => {
                     resolve(sap.ui.component({
-                        name: "DynamicTable",
+                        name: "bean.dynamic.Table",
                         manifest: true,
                         componentData: {
                             method: sMethod,

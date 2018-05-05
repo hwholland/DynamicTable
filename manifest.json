@@ -17,7 +17,7 @@
     },
     "description": "{{description}}",
     "i18n": "model/i18n.properties",
-    "id": "DynamicTable",
+    "id": "bean.dynamic.Table",
     "title": "{{title}}",
     "type": "component"
   },

@@ -1,4 +1,4 @@
-sap.ui.define(['sap/ui/core/UIComponent', 'sap/ui/model/json/JSONModel', 'DynamicTable/js/Control'], 
+sap.ui.define(['sap/ui/core/UIComponent', 'sap/ui/model/json/JSONModel', 'bean/dynamic/Table/js/Control'], 
     function (UIComponent, JSONModel, ResponsiveTable) {
     "use strict";
 
@@ -10,7 +10,7 @@ sap.ui.define(['sap/ui/core/UIComponent', 'sap/ui/model/json/JSONModel', 'Dynami
      * @subject     DynamicTable
      * @extends     sap.ui.core.UIComponent
      */
-    var Component = UIComponent.extend("DynamicTable", {
+    var Component = UIComponent.extend("bean.dynamic.Table", {
 
         /**
          * @property   {Object} metadata settings and information about the application
@@ -150,7 +150,7 @@ sap.ui.define(['sap/ui/core/UIComponent', 'sap/ui/model/json/JSONModel', 'Dynami
             for (var i = 0; i < oConfig.columns.length; i++) {
                 var oTemplate = oConfig.columns[i].template;
 
-                var oFragment = sap.ui.xmlfragment("DynamicTable.fragment." + oTemplate.fragment, this);
+                var oFragment = sap.ui.xmlfragment("bean.dynamic.Table.fragment." + oTemplate.fragment, this);
                 var aProperties = Object.getOwnPropertyNames(oTemplate.binding);
                 for(var j = 0; j < aProperties.length; j++) {
                     var sProperty = aProperties[j];
@@ -164,7 +164,7 @@ sap.ui.define(['sap/ui/core/UIComponent', 'sap/ui/model/json/JSONModel', 'Dynami
             for (var x = 0; x < oConfig.toolbar.length; x++) {
                 var oTemplate = oConfig.toolbar[x];
                 console.log(oTemplate);
-                var oFragment = sap.ui.xmlfragment("DynamicTable.fragment." + oTemplate.fragment, this);
+                var oFragment = sap.ui.xmlfragment("bean.dynamic.Table.fragment." + oTemplate.fragment, this);
                 if(oTemplate.properties) {
                     var aProperties = Object.getOwnPropertyNames(oTemplate.properties);
                     for(var j = 0; j < aProperties.length; j++) {

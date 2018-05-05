@@ -1,5 +1,5 @@
 {
-    "name": "@hwholland/DynamicTable",
+    "name": "@hwholland/bean.dynamic.Table",
     "version": "0.5.0",
     "description": "OpenUI5 component which dynamically builds a responsive table (sap.m.Table) based on properties defined in a data structure.",
     "main": "index.js",
