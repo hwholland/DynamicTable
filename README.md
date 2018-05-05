@@ -42,4 +42,4 @@ to the project's directory on the filesystem using a command-prompt or terminal.
 
 ## Authors
 
-* **Harrison Holland** - [hwholland](https://github.com/hwholland)
+* **Harrison Holland** - [Harrison's GitHub](https://github.com/hwholland)
