@@ -38,11 +38,8 @@ to the project's directory on the filesystem using a command-prompt or terminal.
 ## Built With
 
 * [OpenUI5](https://github.com/openui5) - The user-interface framework
-* [Node.js](https://nodejs.org) - Server-side JavaScript engine
-* [Express](https://github.com/expressjs/express) - The web framework
 
 
 ## Authors
 
-* **Juichia Che** - *Concept*
-* **Harrison Holland** - *Software Architecture & Engineering, Database Design & Implementation, User Interface Design* - [hwholland](https://github.com/hwholland)
+* **Harrison Holland** - [hwholland](https://github.com/hwholland)
