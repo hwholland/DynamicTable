@@ -7,9 +7,15 @@ This is a component which makes up part of a library of components which each pr
 OpenUI5 must be downloaded and extracted.  The bootstrap for this component then needs to be adapted to the location of the UI5 folder on the filesystem.  This can be done by editing the following lines of code in the index.html file, or wherever the main application bootstrap is:
 
 ```
-<script src="../../../../libs/ui5/resources/sap-ui-core.js" id="sap-ui-bootstrap" data-sap-ui-theme="sap_belize_plus" data-sap-ui-bindingSyntax="complex" data-sap-ui-compatVersion="edge" data-sap-ui-preload="async" data-sap-ui-language="en" data-sap-ui-resourceroots='{
-                    "bean.dynamic.Table": "./"  }'>
-        </script>
+<script src="../../../../libs/ui5/resources/sap-ui-core.js" id="sap-ui-bootstrap" 
+	data-sap-ui-theme="sap_belize_plus" 
+	data-sap-ui-bindingSyntax="complex" 
+	data-sap-ui-compatVersion="edge" 
+	data-sap-ui-preload="async" 
+	data-sap-ui-language="en" 
+	data-sap-ui-resourceroots='{
+		"bean.dynamic.Table": "./"  }'>
+</script>
 
 ```
 
