@@ -1,5 +1,136 @@
+
 {
   "view": {
+    "sales": {
+      "opportunity": {
+        "rowActionItems": [
+      {
+        "icon": "sap-icon://sales-quote",
+        "text": "Select Bill"
+      },
+      {
+        "icon": "sap-icon://attachment",
+        "text": "Attachment"
+      },
+      {
+        "icon": "sap-icon://group-2",
+        "text": "Additional Data"
+      }
+    ],
+        "toolbar": [
+          {
+            "fragment": "Title",
+            "properties": {
+              "text": "Sales Opportunities"
+            }
+          },
+          {
+            "fragment": "ToolbarSpacer"
+          },
+          {
+            "fragment": "SearchField"
+          }
+        ],
+                "columns": [
+          {
+            "width": "12em",
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Block",
+            "demandPopin": true,
+            "header": "Opportunity ID",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>OpportunityID"
+              }
+            },
+            "mergeDuplicates": true
+          },
+          {
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Customer",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>CompanyName"
+              }
+            },
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Lead Category",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>LeadCategory"
+              }
+            },
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Product / Service",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>ThingName"
+              }
+            },
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Amount",
+            "visible": true,
+            "hAlign": "End",
+            "vAlign": "Middle",
+            "template": {
+              "fragment": "ObjectNumber",
+              "binding": {  
+              }
+            },
+            "mergeDuplicates": false
+          },
+          {
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Expected Close",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": {
+              "fragment": "Label",
+              "binding": {  
+                "text": "ClosingDate"
+              }
+            },
+            "mergeDuplicates": false
+          }
+        ]
+      }
+    },
     "company": {
       "customer": {
         "toolbar": [

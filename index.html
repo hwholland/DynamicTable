@@ -27,6 +27,7 @@
             var pComponent = new Promise((resolve, reject) => {
                 resolve(getInstance("view", "company", "customer", null));
             }).then(function (oComponent) {
+                console.log(oComponent);
                 var oConfigModel = oComponent.getConfigModel();
                 var oDataModel = oComponent.getDataModel();
                 var oData = oConfigModel.getData();

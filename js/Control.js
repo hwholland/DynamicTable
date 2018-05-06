@@ -1,7 +1,7 @@
-sap.ui.define(["bean/dynamic/Table/js/Base", "sap/m/Table", "sap/m/Column", "sap/m/Toolbar", "sap/m/ColumnListItem", "sap/m/Text", "sap/m/Label"],
+sap.ui.define(["dynamic/Table/js/Base", "sap/m/Table", "sap/m/Column", "sap/m/Toolbar", "sap/m/ColumnListItem", "sap/m/Text", "sap/m/Label"],
     function(Base, Table, Column, Toolbar, ColumnListItem, Text, Label) {
         "use strict";
-        return Base.extend("bean.dynamic.Table.Control", {
+        return Base.extend("bean.dynamic.Table.js.Control", {
 
             /**
              * User-interface class for generating a responsive table which gets
@@ -107,7 +107,6 @@ sap.ui.define(["bean/dynamic/Table/js/Base", "sap/m/Table", "sap/m/Column", "sap
                     //sorter: new sap.ui.model.Sorter("CompanyID"),
                     template: oColumnListItem
                 });
-                console.log(this.table);
             },
 
             /**

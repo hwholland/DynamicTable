@@ -26,13 +26,95 @@ More specifically, this line:
 
 ```
 
-### Installing
+## Installing
 
 Download the package to the host computer (desktop or server), then navigate
 to the project's directory on the filesystem using a command-prompt or terminal.
 
 ```
 ~/DynamicTable
+```
+
+## Usage
+
+The index.html file is not necessary, but has been included as an example of how to use the component.  The basic idea is to modify the JSON file found in the /model folder, which looks something like this:
+
+```
+{
+  "view": {
+    "company": {
+      "customer": {
+        "toolbar": [
+          {
+            "fragment": "Title",
+            "properties": {
+              "text": "Customers"
+            }
+          },
+          {
+            "fragment": "ToolbarSpacer"
+          },
+          {
+            "fragment": "SearchField"
+          }
+        ],
+        "columns": [
+          {
+            "width": "12em",
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Block",
+            "demandPopin": true,
+            "header": "Company ID",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>CompanyID"
+              }
+            },
+            "mergeDuplicates": true
+          },
+          {
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Company Name",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>CompanyName"
+              }
+            },
+            "mergeDuplicates": false
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+Values associated with a fragment property are references to the fragments found in the /fragment folder.  These are templates for the controls which will be used to compose the table (columns, toolbars, etc.).  More details on the configurations can be found in the OpenUI5 library for the [sap.m.Table](https://sapui5.hana.ondemand.com/#/api/sap.m.Table).
+
+Once the config file is maintained, the component can be called from an application like so:
+
+```
+var sMethod = "view";
+var sSubject = "company";
+var sClass = "customer";
+
+var pComponent = new Promise((resolve, reject) => {
+	resolve(getInstance(sMethod, sSubject, sClass, null));
+}).then(function (oComponent) {
+	var oControl = oComponent.getControl(sMethod, sSubject, sClass, null);
+	oControl.placeAt("body");
+});
+
 ```
 
 ## Built With
