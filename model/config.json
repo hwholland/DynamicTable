@@ -3,20 +3,7 @@
   "view": {
     "sales": {
       "opportunity": {
-        "rowActionItems": [
-      {
-        "icon": "sap-icon://sales-quote",
-        "text": "Select Bill"
-      },
-      {
-        "icon": "sap-icon://attachment",
-        "text": "Attachment"
-      },
-      {
-        "icon": "sap-icon://group-2",
-        "text": "Additional Data"
-      }
-    ],
+        
         "toolbar": [
           {
             "fragment": "Title",
