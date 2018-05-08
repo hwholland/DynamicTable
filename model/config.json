@@ -178,6 +178,82 @@
             "mergeDuplicates": false
           }
         ]
+      },
+      "general": {
+        "toolbar": [
+          {
+            "fragment": "Title",
+            "properties": {
+              "text": "Companies"
+            }
+          },
+          {
+            "fragment": "ToolbarSpacer"
+          },
+           {
+            "fragment": "Button_AddCompany",
+            "properties": {
+              "icon": "sap-icon://add"
+            },
+            "events": {
+              "press": "onOpenDialog"
+            }
+          },
+          {
+            "fragment": "SearchField"
+          }
+        ],
+        "columns": [
+          {
+            "width": "12em",
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Block",
+            "demandPopin": true,
+            "header": "Company ID",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>CompanyID"
+              }
+            },
+            "mergeDuplicates": true
+          },
+          {
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Company Name",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>CompanyName"
+              }
+            },
+            "mergeDuplicates": false
+          },
+                    {
+            "minScreenWidth": "Phone",
+            "popinDisplay": "Inline",
+            "demandPopin": true,
+            "header": "Category",
+            "visible": true,
+            "hAlign": "Begin",
+            "vAlign": "Middle",
+            "template": {
+              "fragment": "Label",
+              "binding": {
+                "text": "data>CompanyCategory"
+              }
+            },
+            "mergeDuplicates": false
+          }
+        ]
       }
     },
     "person": {
