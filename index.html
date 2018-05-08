@@ -5,14 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="utf-8">
         <script src="../../../../libs/ui5/resources/sap-ui-core.js" id="sap-ui-bootstrap" data-sap-ui-theme="sap_belize_plus" data-sap-ui-bindingSyntax="complex" data-sap-ui-compatVersion="edge" data-sap-ui-preload="async" data-sap-ui-language="en" data-sap-ui-resourceroots='{
-                    "dynamic.SimpleForm": "./"  }'>
+                    "bean.dynamic.Table": "./"  }'>
         </script>
         <script id="web">
         sap.ui.getCore().attachInit(function() {
             function getInstance(sMethod, sSubject, sClass, oView) {
                 return (new Promise((resolve, reject) => {
                     resolve(sap.ui.component({
-                        name: "dynamic.SimpleForm",
+                        name: "bean.dynamic.Table",
                         manifest: true,
                         componentData: {
                             method: sMethod,

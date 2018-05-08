@@ -1,7 +1,7 @@
-sap.ui.define(["dynamic/Table/js/Base", "sap/m/Toolbar", "sap/ui/core/Title", "sap/ui/layout/form/SimpleForm", "sap/m/Text", "sap/m/Label"],
-    function(Base, Toolbar, Title, SimpleForm, Text, Label) {
+sap.ui.define(["dynamic/Table/js/Base", "sap/m/Table", "sap/m/Column", "sap/m/Toolbar", "sap/m/ColumnListItem", "sap/m/Text", "sap/m/Label"],
+    function(Base, Table, Column, Toolbar, ColumnListItem, Text, Label) {
         "use strict";
-        return Base.extend("dynamic.Table.js.Control", {
+        return Base.extend("bean.dynamic.Table.js.Control", {
 
             /**
              * User-interface class for generating a responsive table which gets
@@ -16,22 +16,12 @@ sap.ui.define(["dynamic/Table/js/Base", "sap/m/Toolbar", "sap/ui/core/Title", "s
              */
             constructor: function(sId) {
                 this.sId = sId;
-                this.form = new SimpleForm(sId, {
-                    editable: true,
-                    layout: "ResponsiveGridLayout",
-                    labelSpanXL: 3,
-                    labelSpanL: 3,
-                    labelSpanM: 3,
-                    labelSpanS: 3,
-                    adjustLabelSpan: false,
-                    emptySpanXL: 0,
-                    emptySpanL: 0,
-                    emptySpanM: 0,
-                    emptySpanS: 0,
-                    columnsXL: 2,
-                    columnsL: 2,
-                    columnsM: 2,
-                    columnsS: 2
+                this.table = new Table(sId, {
+                    mode: "SingleSelectMaster",
+                    inset: false,
+                    alternateRowColors: false,
+                    growing: true,
+                    headerToolbar: new Toolbar()
                 });
             },
 
@@ -46,22 +36,77 @@ sap.ui.define(["dynamic/Table/js/Base", "sap/m/Toolbar", "sap/ui/core/Title", "s
                 var oModel = this.getEmptyModel();
                 oModel.setSizeLimit(250000);  
                 oModel.setProperty("/columns", oConfig.columns);
-                this.form.setModel(oModel);
-                this.getContent(oConfig);
+                this.table.setModel(oModel);
+                this.setDataset(oConfig);
+                this.setColumns();
+                this.setToolbar(oConfig);
             },
 
-            getContent: function(oConfig) {
-                for (var i = 0; i < oConfig.formContainers.length; i++) {
-                    if(oConfig.formContainers[i].title) {
-                        this.form.addContent(oConfig.formContainers[i].title);
-                    }
-                    if(oConfig.formContainers[i].label) {
-                        this.form.addContent(oConfig.formContainers[i].label);
-                    }
-                    if(oConfig.formContainers[i].control) {
-                        this.form.addContent(oConfig.formContainers[i].control);
-                    }
+            /**
+             * @method      setColumns
+             * @memberof    DynamicTable.js.Control
+             * @private
+             */
+            setColumns: function() {
+                this.table.bindAggregation("columns", "/columns", function(sId, oContext) {
+                    var oColumnName = oContext.getObject().oColumnName;
+                    return new Column({
+                        header: new Label({
+                            text: oContext.getObject().header
+                        }),
+                        demandPopin: oContext.getObject().demandPopin,
+                        popinDisplay: oContext.getObject().popinDisplay,
+                        visible: oContext.getObject().visible,
+                        hAlign: oContext.getObject().hAlign,
+                        vAlign: oContext.getObject().vAlign,
+                        width: oContext.getObject().width,
+                        minScreenWidth: oContext.getObject().minScreenWidth,
+                        mergeDuplicates: oContext.getObject().mergeDuplicates,
+                        visible: oContext.getObject().visible
+                    });
+                });
+            },
+
+            /**
+             * Loops through each of the controls in the configuration and adds them to the toolbar content  
+             *
+             * @method     setToolbar
+             * @memberof   DynamicTable.js.Control
+             * @public
+             */
+            setToolbar: function(oConfig) {
+                var oToolbar = this.table.getHeaderToolbar();
+                for (var i = 0; i < oConfig.toolbar.length; i++) {
+                    oToolbar.addContent(oConfig.toolbar[i]);
                 }
+            },
+
+            /**
+             * Binds the table to a dataset which uses a ColumnListItem
+             * as a template for each row in the table.  
+             *
+             * @method     setDataset
+             * @memberof   DynamicTable.js.Control
+             * @param      {Object}  oData    The dataset to bind to the table
+             * @param      {Object}  oConfig  The configuration containing the column properties
+             * @public
+             */
+            setDataset: function(oConfig) {
+                //var oModel = this.table.getModel();
+                //oModel.setProperty("/data", oData.data);
+                var oColumnListItem = new ColumnListItem({
+                    highlight: "{highlight}"
+                });
+                for (var i = 0; i < oConfig.columns.length; i++) {
+                    oColumnListItem.addCell(oConfig.columns[i].template);
+                    //  var oLabel = new Label().bindProperty("text", oConfig.columns[i].template);
+                    //  
+                }
+                this.table.bindAggregation("items", {
+                    path: "data>/data",
+                    //sorter: new sap.ui.model.Sorter("CompanyID"),
+                    template: oColumnListItem
+                });
             },
 
             /**
@@ -73,7 +118,7 @@ sap.ui.define(["dynamic/Table/js/Base", "sap/m/Toolbar", "sap/ui/core/Title", "s
              * @public
              */
             getControl: function() {
-                return (this.form);
+                return (this.table);
             }
 
         })

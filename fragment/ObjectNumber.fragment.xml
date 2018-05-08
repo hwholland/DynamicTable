@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<ObjectNumber 
+		number="{
+			parts:[{
+				path:'data>Amount'
+			},{
+				path:'data>CurrencyCode'
+			}],
+			type: 'sap.ui.model.type.Currency',
+			formatOptions: {
+				showMeasure: false
+			}
+		}" 
+		unit="{CurrencyCode}"/>
+</core:FragmentDefinition>
