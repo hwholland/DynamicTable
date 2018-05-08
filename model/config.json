@@ -130,6 +130,15 @@
           {
             "fragment": "ToolbarSpacer"
           },
+           {
+            "fragment": "Button_AddCompany",
+            "properties": {
+              "icon": "sap-icon://add"
+            },
+            "events": {
+              "press": "onOpenDialog"
+            }
+          },
           {
             "fragment": "SearchField"
           }
