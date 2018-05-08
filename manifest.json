@@ -17,7 +17,7 @@
     },
     "description": "{{description}}",
     "i18n": "model/i18n.properties",
-    "id": "dynamic.Table",
+    "id": "dynamic.SimpleForm",
     "title": "{{title}}",
     "type": "component"
   },
@@ -29,6 +29,9 @@
           "lazy": false
         },
         "sap.ui.core": {
+          "lazy": false
+        },
+        "sap.ui.layout": {
           "lazy": false
         }
       },

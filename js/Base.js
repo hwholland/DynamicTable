@@ -1,6 +1,6 @@
 sap.ui.define(["sap/ui/base/Object", "sap/ui/model/json/JSONModel"], function(Base, JSONModel) {
     "use strict";
-    return Base.extend("bean.dynamic.Table.js.Base", {
+    return Base.extend("dynamic.Table.js.Base", {
 
         /**
          * @class       DynamicTable.js.Base
