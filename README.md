@@ -1,4 +1,4 @@
-# Dynamic Table (UI5)
+# bean.dynamic.Table
 
 This is a component which makes up part of a library of components which each provide a dynamic control (user-interface) in JavaScript, using the OpenUI5 franework.  This component builds a responsive table (sap.m.Table in OpenUI5) based on configurations made in a JSON file.  The data structure modeled in JSON can also be reflected in a database, or any other structured model. 
 

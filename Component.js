@@ -1,5 +1,5 @@
-sap.ui.define(['sap/ui/core/UIComponent', 'sap/ui/model/json/JSONModel', 'dynamic/Table/js/Control', 'solo/web/Component'], 
-    function (UIComponent, JSONModel, ResponsiveTable, UICore) {
+sap.ui.define(['sap/ui/core/UIComponent', 'sap/ui/model/json/JSONModel', 'dynamic/Table/js/Control'], 
+    function (UIComponent, JSONModel, ResponsiveTable) {
     "use strict";
 
     /**
@@ -10,7 +10,7 @@ sap.ui.define(['sap/ui/core/UIComponent', 'sap/ui/model/json/JSONModel', 'dynami
      * @subject     DynamicTable
      * @extends     sap.ui.core.UIComponent
      */
-    var Component = UICore.extend("dynamic.Table", {
+    var Component = UIComponent.extend("dynamic.Table", {
 
         /**
          * Generates responsive simpleForms from the OpenUI5 framework (sap.m.SimpleForm) dynamically
@@ -30,7 +30,6 @@ sap.ui.define(['sap/ui/core/UIComponent', 'sap/ui/model/json/JSONModel', 'dynami
             var sClass = this.getComponentData().class;
             this.view = this.getComponentData().view;
             this.tables = {};
-            this.components = {};
             var oTable = this.getTable(sMethod, sSubject, sClass);
         },
 
@@ -210,19 +209,6 @@ sap.ui.define(['sap/ui/core/UIComponent', 'sap/ui/model/json/JSONModel', 'dynami
                         oFragment.setProperty(sProperty, oTemplate.properties[sProperty]);
                     }    
                 }
-                /*
-                if(oTemplate.events) {
-                    var aEvents = Object.getOwnPropertyNames(oTemplate.events);
-                    for(var j = 0; j < aEvents.length; j++) {
-                        var sEvent = aEvents[j];
-
-                        console.log(window['solo']['web']['Component']);
-                        oFragment.addEventDelegate({
-                            sEvent: window['solo']['web'][sEvent]
-                        });
-                    }   
-                }
-                */
                 if(this.view) {
                     this.view.addDependent(oFragment);    
                 }
